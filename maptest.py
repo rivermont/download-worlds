@@ -24,5 +24,7 @@ try:
 		print('[{0}] [WORK]: Saving {1}.png'.format(get_time(), str(i)))
 		with urllib.request.urlopen(url) as response, open(str(i) + '.png', 'wb+') as saveFile:
 				shutil.copyfileobj(response, saveFile)
+		time.sleep(5)
+
 except KeyboardInterrupt:
 	print('[{0}] [ERR]: User performed a keyboard interrupt. Stopping...'.format(get_time()))
